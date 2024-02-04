@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,400;0,600;0,700;1,500&family=Syncopate:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-one: 'Alumni Sans', sans-serif;
+    --font-two: 'Syncopate', sans-serif;
+}
+
+/* #000000 */
+
+.background {
+    background-image: url(./img/space.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    /* background-color: #95959513; */
+}
+
+header nav {
+    display: none;
+    position: absolute;
+    top: auto;
+    left: 24%;
+
+    /* background-color: #beb9b981; */
+}
+
+header nav.active {
+    display: block;
+    transition: 2s;
+}
+
+header .line {
+    width: 2px;
+    height: 18px;
+    background-color: rgb(62, 62, 255);
+}
+
+header a {
+    font-family: var(--font-one);
+    color: #959595;
+    text-decoration: none;
+}
+
+header nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-family: var(--font-two);
+    color: #959595;
+    transition: 2ms;
+}
+
+header nav ul li a:hover {
+    color: #adadad;
+}
+
+.hamburger {
+    background-color: rgba(62, 62, 255, 0.208);
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    border-radius: 34%;
+    transition: 2ms;
+}
+
+.hamburger:hover {
+    background-color: rgba(62, 62, 255, 0.308);
+}
+
+.hamburger div {
+    height: 2px;
+    width: 14px;
+    background-color: #cacaca;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .background {
+        background-position: center;
+    }
+
+    header nav {
+        top: 100%;
+        left: 0;
+        background-color: #000000a6;
+        width: 100%;
+        padding: 2rem 2rem;
+    }
+
+    header .line {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(62, 62, 255, 0.336);
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+
+
+
+}
