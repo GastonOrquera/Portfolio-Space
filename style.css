@@ -40,13 +40,13 @@ header nav {
 
 header nav.active {
     display: block;
-    transition: 2s;
+    margin-left: 8rem;
 }
 
 header .line {
     width: 2px;
     height: 18px;
-    background-color: rgb(62, 62, 255);
+    background-color: rgb(73, 73, 255);
 }
 
 header a {
@@ -66,9 +66,10 @@ header nav ul li {
 
 header nav ul li a {
     text-decoration: none;
-    font-family: var(--font-two);
-    color: #959595;
+    font-family: var(--font-one);
+    color: #b9b9b9;
     transition: 2ms;
+    font-size: 1.2rem;
 }
 
 header nav ul li a:hover {
@@ -76,27 +77,45 @@ header nav ul li a:hover {
 }
 
 .hamburger {
-    background-color: rgba(62, 62, 255, 0.208);
+    /* background-color: rgba(62, 62, 255, 0.208); */
     cursor: pointer;
-    height: 24px;
-    width: 24px;
+    height: 26px;
+    width: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 2px;
-    border-radius: 34%;
+    /* border-radius: 34%; */
     transition: 2ms;
 }
 
-.hamburger:hover {
-    background-color: rgba(62, 62, 255, 0.308);
+.hamburger .two {
+    width: 12px;
 }
 
-.hamburger div {
+.hamburger .one,
+.two,
+.three {
     height: 2px;
-    width: 14px;
+    width: 16px;
     background-color: #cacaca;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    border-radius: 2px;
+    z-index: 999;
+}
+
+.active .one {
+    transform: rotate(45deg) translate(3px, 2px);
+    background-color: rgb(73, 73, 255);
+}
+
+.active .two {
+    opacity: 0;
+}
+
+.active .three {
+    transform: rotate(-45deg) translate(.240rem, -.204rem);
 }
 
 @media only screen and (max-width: 800px) {
@@ -111,6 +130,10 @@ header nav ul li a:hover {
         background-color: #000000a6;
         width: 100%;
         padding: 2rem 2rem;
+    }
+
+    header nav.active {
+        margin-left: 0;
     }
 
     header .line {
